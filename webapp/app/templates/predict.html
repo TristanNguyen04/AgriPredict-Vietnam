@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import "bootstrap5/form.html" as wtf %}
+
+{% block app_content %}
+<h1 class="display-4">Predict Crop Production</h1>
+<p>Enter the inputs for crop production prediction.</p>
+
+<div class="row">
+    <div class="col-md-6">
+        {{ wtf.render_form(form) }}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "bootstrap5/form.html" as wtf %}
+
+{% block app_content %}
+<div class="container-fluid d-flex flex-column" style="min-height: 100vh;">
+    <div class="card shadow-sm flex-grow-1" style="border-radius: 12px; overflow: hidden; border: none;">
+        <!-- Header -->
+        <div class="card-header text-white" style="background-color: #004d00; padding: 1.5rem;">
+            <h2 class="mb-0 text-center" style="font-family: 'Lora', serif;">Add a New Post</h2>
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body" style="background: #f9f9f9; padding: 2rem;">
+            <p class="lead text-center" style="color: #555; font-family: 'Roboto', sans-serif;">
+                Share updates, insights, or agricultural news with the community.
+            </p>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-10">
+                    <form method="POST" action="{{ url_for('add_post') }}">
+                        {{ wtf.render_form(form) }}
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="card-footer text-center" style="background: #e0e0e0;">
+            <small style="color: #777;">© 2024 AgriPredict Vietnam - Empowering Agriculture</small>
+        </div>
+    </div>
+</div>
+{% endblock %}

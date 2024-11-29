@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% import "bootstrap5/form.html" as wtf %}
+
+{% block app_content %}
+<div class="container mt-5">
+
+    <!-- Page Header -->
+    <h1 class="display-4 text-center mb-4" style="font-family: 'Roboto', sans-serif; color: #006600;">Farmer Dashboard</h1>
+    <p class="lead text-center mb-5" style="font-family: 'Lora', serif; color: #4CAF50;">
+        Track your crop production over the months and analyze trends for better planning.
+    </p>
+
+    <!-- Add Crop Data Section -->
+    <div class="card shadow-sm mb-5" style="border-radius: 15px; background-color: #f4f8f4;">
+        <div class="card-body">
+            <h3 class="card-title" style="color: #006600;">Add Crop Data</h3>
+            <p>Input monthly crop production data to track your progress.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    {{ wtf.render_form(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Production Trends Section -->
+    <div class="card shadow-sm" style="border-radius: 15px; background-color: #f4f8f4;">
+        <div class="card-body">
+            <h3 class="card-title" style="color: #006600;">Production Trends</h3>
+            {% if months and productions %}
+            <p class="text-muted mb-4">Visualize your crop production trends over time.</p>
+            <div>
+                <canvas id="productionChart" width="600" height="400"></canvas>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const labels = {{ months | tojson }};  // Updated to include both month and year
+                const productions = {{ productions | tojson }};
+                
+                const ctx = document.getElementById('productionChart').getContext('2d');
+                const productionChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Crop Production (tonnes)',
+                            data: productions,
+                            borderColor: 'rgba(0, 102, 0, 1)',
+                            backgroundColor: 'rgba(0, 204, 102, 0.2)',
+                            fill: true,
+                            tension: 0
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    font: {
+                                        family: 'Roboto',
+                                        size: 14,
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: { 
+                                title: { 
+                                    display: true, 
+                                    text: 'Month & Year',
+                                    font: {
+                                        family: 'Roboto',
+                                        size: 16,
+                                    }
+                                } 
+                            },
+                            y: { 
+                                title: { 
+                                    display: true, 
+                                    text: 'Production (tonnes)',
+                                    font: {
+                                        family: 'Roboto',
+                                        size: 16,
+                                    }
+                                } 
+                            }
+                        }
+                    }
+                });
+            </script>
+            {% else %}
+            <p class="text-warning">No production data available. Add your records to see trends.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

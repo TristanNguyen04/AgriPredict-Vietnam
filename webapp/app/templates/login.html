@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% import "bootstrap5/form.html" as wtf %}
+
+{% block app_content %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card shadow-lg" style="width: 28rem; border: none; border-radius: 12px; overflow: hidden;">
+        <div class="card-header text-center text-white" style="background-color: #006600;">
+            <h2 class="mb-0" style="font-family: 'Lora', serif;">Welcome to AgriPredict</h2>
+            <p style="font-size: 14px;">Sign in to access sustainable farming insights</p>
+        </div>
+        <div class="card-body" style="background: #fff; padding: 2rem;">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        {% if "Please log in" not in message %}
+                            <div class="alert alert-info" role="alert">{{ message }}</div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <h4 class="card-title text-center mb-3" style="color: #333; font-family: 'Roboto', sans-serif;">Sign In</h4>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    {{ wtf.render_form(form) }}
+                </div>
+            </div>
+            <p class="text-center mt-3" style="font-size: 14px;">
+                New User? <a href="{{ url_for('register') }}" style="color: #006600; text-decoration: none; font-weight: bold;">Click to Register!</a>
+            </p>
+        </div>
+        <div class="card-footer text-center" style="background: #f8f9fa;">
+            <small style="color: #777;">© 2024 AgriPredict Vietnam — Empowering Agriculture</small>
+        </div>
+    </div>
+</div>
+{% endblock %}

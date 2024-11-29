@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% import "bootstrap5/form.html" as wtf %}
+
+{% block app_content %}
+<div class="container mt-5">
+
+    <!-- Page Title -->
+    <h1 class="display-4 text-center mb-4" style="font-family: 'Roboto', sans-serif; color: #006600;">Government Dashboard</h1>
+    <p class="lead text-center mb-5" style="font-family: 'Lora', serif; color: #4CAF50;">Predict crop production and share valuable insights with farmers to improve agricultural practices.</p>
+
+    <!-- Prediction Section -->
+    <div class="card shadow-sm mb-4" style="border-radius: 15px; background-color: #f4f8f4;">
+        <div class="card-body">
+            <h3 class="card-title" style="color: #006600;">Crop Production Prediction</h3>
+            <p>Enter regional data to predict total crop production using our model.</p>
+            <form method="POST" action="{{ url_for('government_dashboard') }}">
+                {{ wtf.render_form(prediction_form) }}
+            </form>
+        </div>
+    </div>
+
+    <!-- Past Production Section -->
+    <div class="card shadow-sm mb-4" style="border-radius: 15px; background-color: #f4f8f4;">
+        <div class="card-body">
+            <h3 class="card-title" style="color: #006600;">Past Crop Production Data</h3>
+            <p>Enter historical crop production data for a region to save it to the database.</p>
+            <form method="POST" action="{{ url_for('government_dashboard') }}">
+                {{ wtf.render_form(past_production_form) }}
+            </form>
+        </div>
+    </div>
+
+    <!-- Forum Section -->
+    <div class="card shadow-sm mb-4" style="border-radius: 15px; background-color: #f4f8f4;">
+        <div class="card-body">
+            <h3 class="card-title" style="color: #006600;">Government Insights Forum</h3>
+            <form method="POST" action="{{ url_for('add_post') }}">
+                <div class="form-group">
+                    <textarea class="form-control" id="forumPost" name="content" placeholder="Share an insight for farmers..." rows="3" required style="border-radius: 10px;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success mt-2" style="border-radius: 10px; background-color: #006600;">Post</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Forum Posts Section -->
+    <h4 class="text-center mb-4" style="color: #006600;">Forum Posts</h4>
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm" style="border-radius: 15px; background-color: #fff;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{{ url_for('view_post', post_id=post.id) }}" class="text-decoration-none" style="color: #006600;">
+                            {{ post.title or "Untitled Post" }}
+                        </a>
+                    </h5>
+                    <p class="card-text" style="color: #4CAF50;">{{ post.content[:100] }}...</p>
+                    <small class="text-muted">Posted on {{ post.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</small>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <p class="text-warning text-center">No posts available yet. Be the first to share an insight!</p>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

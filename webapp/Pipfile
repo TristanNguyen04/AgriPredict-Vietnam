@@ -1,0 +1,41 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+# Flask and Flask Extensions
+flask = "2.2.2"  # Core Flask framework
+flask-login = ">=0.6.3"  # User authentication
+flask-migrate = "*"  # Database migrations
+flask-sqlalchemy = "*"  # ORM for database interaction
+flask-wtf = "*"  # Form handling
+bootstrap-flask = "*"  # Simplified Bootstrap integration with Flask
+
+# Client-Side Libraries and Utilities
+transcrypt = "*"  # Translates Python to JavaScript for client-side logic
+
+# Utility Libraries
+importlib-resources = "*"  # For managing static and template files
+colorama = "*"  # For terminal output colors
+Werkzeug = "2.2.2"  # WSGI library used by Flask
+
+# Data Science and Machine Learning
+numpy = "*"  # For numerical computations (used in prediction models)
+pandas = "*"  # For data manipulation (used in prediction model preparation)
+
+# Visualization
+matplotlib = "*"  # For server-side visualizations
+chart.js = "*"  # For client-side visualizations
+
+# Deployment and Production
+gunicorn = "*"  # WSGI HTTP server for production
+python-dotenv = "*"  # Manage environment variables in `.env`
+
+[dev-packages]
+# Tools for Development
+autopep8 = "*"  # For code formatting
+flake8 = "*"  # For linting and checking code quality
+
+[requires]
+python_version = "3.12"

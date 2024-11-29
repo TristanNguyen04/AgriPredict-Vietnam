@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% import "bootstrap5/form.html" as wtf %}
+
+{% block app_content %}
+<style>
+    .post-content {
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+</style>
+
+<div class="container mt-4" style="background: none;">
+    <!-- Post Title and Content -->
+    <div class="card shadow-sm" style="border-radius: 12px; overflow: hidden; border: none;">
+        <div class="card-header text-white" style="background-color: #006600; padding: 1.5rem;">
+            <h2 class="mb-0" style="font-family: 'Lora', serif;">{{ post.title or "Untitled Post" }}</h2>
+        </div>
+        <div class="card-body" style="background: #f9f9f9; padding: 2rem;">
+            <p class="post-content">
+                {{ post.content | safe}}
+            </p>
+            <p class="text-muted" style="font-size: 14px; margin-top: 1rem;">
+                Posted by <strong>{{ post.author.username }}</strong> on {{ post.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
+            </p>
+            <!-- Like Button -->
+            <div class="mt-4">
+                <button 
+                    class="btn {% if post.is_liked_by(current_user) %}btn-primary{% else %}btn-outline-primary{% endif %}" 
+                    id="like-button-{{ post.id }}" 
+                    data-post-id="{{ post.id }}">
+                    <i class="{% if post.is_liked_by(current_user) %}bi bi-hand-thumbs-up-fill{% else %}bi bi-hand-thumbs-up{% endif %}" id="like-icon-{{ post.id }}"></i>
+                    <span id="like-count-{{ post.id }}">{{ post.likes_count }}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <hr class="mt-4" style="border-color: #ddd;">
+
+    <!-- Comments Section -->
+    <div class="comments-section mt-4">
+        <h3 style="font-family: 'Roboto', sans-serif; color: #006600;">Comments</h3>
+        {% if comments %}
+            {% for comment in comments %}
+            <div class="card mt-3 shadow-sm" style="border: none; border-radius: 8px;">
+                <div class="card-body" style="background: #fff;">
+                    <p style="font-size: 15px; color: #555;">{{ comment.content }}</p>
+                    <small class="text-muted">
+                        Commented by <strong>{{ comment.author.username }}</strong> on {{ comment.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
+                    </small>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <p class="text-warning mt-3" style="font-size: 16px;">No comments yet. Be the first to comment!</p>
+        {% endif %}
+    </div>
+
+    <!-- Add a Comment -->
+    <div class="add-comment-section mt-4">
+        <h4 style="font-family: 'Roboto', sans-serif; color: #004d00;">Add a Comment</h4>
+        <form method="POST" action="{{ url_for('add_comment', post_id=post.id) }}">
+            <div class="form-group">
+                <textarea class="form-control" id="commentContent" name="content" placeholder="Write your comment here..." rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success mt-3" style="background-color: #004d00;">Send</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const likeButton = document.getElementById(`like-button-{{ post.id }}`);
+
+        likeButton.addEventListener('click', async function () {
+            const postId = this.getAttribute('data-post-id');
+
+            // Send a POST request to like/unlike the post
+            const response = await fetch(`/like_post/${postId}`, {
+                method: 'POST',
+            });
+
+            const data = await response.json();
+
+            // Update the like count
+            const likeCount = document.getElementById(`like-count-${postId}`);
+            likeCount.textContent = data.likes_count;
+
+            // Update the button and icon classes
+            const icon = document.getElementById(`like-icon-${postId}`);
+            if (data.liked) {
+                this.classList.add('btn-primary');
+                this.classList.remove('btn-outline-primary');
+                icon.classList.remove('bi-hand-thumbs-up');
+                icon.classList.add('bi-hand-thumbs-up-fill');
+            } else {
+                this.classList.remove('btn-primary');
+                this.classList.add('btn-outline-primary');
+                icon.classList.remove('bi-hand-thumbs-up-fill');
+                icon.classList.add('bi-hand-thumbs-up');
+            }
+        });
+    });
+</script>
+{% endblock %}

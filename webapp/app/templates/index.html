@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<div class="container mt-5">
+    <!-- Page Title -->
+    <h1 class="display-4 text-center mb-4" style="font-family: 'Roboto', sans-serif; color: #006600;">Home - Crop Production Graphs</h1>
+    <p class="lead text-center mb-5" style="font-family: 'Lora', serif; color: #4CAF50;">View crop production trends by region and explore insights on sustainable agriculture.</p>
+
+    <!-- Loop Through Regions -->
+    <div class="row">
+        {% for region in regions %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm" style="border-radius: 15px; background-color: #f4f8f4;">
+                <div class="card-body text-center">
+                    <h4 class="card-title" style="color: #006600;">{{ region }}</h4>
+                    <canvas id="productionChart-{{ loop.index }}" width="600" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const ctx = document.getElementById('productionChart-{{ loop.index }}').getContext('2d');
+                const productionChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: {{ regions[region]['year'] | tojson }},
+                        datasets: [{
+                            label: 'Crop Production (tonnes)',
+                            data: {{ regions[region]['productions'] | tojson }},
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            fill: true,
+                            tension: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            x: { 
+                                title: { display: true, text: 'Year' },
+                                ticks: { color: "#006600" }
+                            },
+                            y: { 
+                                title: { display: true, text: 'Production (tonnes)' },
+                                ticks: { color: "#006600" }
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+        {% endfor %}
+    </div>
+
+    <!-- Add more sections or content below if needed -->
+    <div class="text-center mt-5">
+        <p class="lead" style="color: #4CAF50;">Explore more insights, predictions, and share your knowledge on sustainable farming!</p>
+    </div>
+</div>
+
+{% endblock %}
