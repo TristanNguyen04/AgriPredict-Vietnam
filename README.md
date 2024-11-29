@@ -3,6 +3,7 @@ Vietnam, a major agriculutral producer in Southeast Asia, dedicates approximatel
 
 Farmers and government officials will be able to utilize the total crop production predictor, by providing the following necessary inputs, such as:
 
+#### Environmental Variables:
 
  **1. Total Precipitation (mm)**: Water availability is critical for crop growth. However, excessive or insufficient precipitation can lead to lower yields.
 
