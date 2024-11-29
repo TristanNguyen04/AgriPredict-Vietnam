@@ -124,13 +124,13 @@ You should see a local IP address being displayed, copy the ip address to your w
 ## Usage
 After copying and pasting the generated IP address from the terminal that you are using, you will land on login page. 
 
-![Login Page](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/governmentdashboard.png) 
+![Login Page](public/governmentdashboard.png) 
 
 
 If this is your first time accessing the website, please register an account for yourself. As you can see in the ***Account Registration***, please fill the relevant fields. 
 
 
-![Registration page](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/Login%20Page-1.png) 
+![Registration page](public/Login%20Page-1.png) 
 
 >**Note**: The website implements role-based access control, where user accounts are assigned specific permissions. For example, only certain accounts are granted the ability to post on forums, while others are restricted to read-only access.
 
@@ -138,13 +138,13 @@ If this is your first time accessing the website, please register an account for
 
 Access of the annual statistics of total food production (tonnes) is shown via clicking on the tab ***Home***. Addtionally, the other countries shown, are meant. The graphs and data for the other countries are not accessible or editable.
 
-![Government Homepage](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/governmentdashboard.png) 
+![Government Homepage](public/governmentdashboard.png) 
 
 **Accessing Community Forum**
 
 In the tab section, click on ***Forum***. This would access the Community Forum page. This is forum where notifications by the Government can be seen. 
 
-![Accessing of Community Forum](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/farmersforum-farmerpov.png) 
+![Accessing of Community Forum](public/farmersforum-farmerpov.png) 
 
 >**Note**: The ***Farmer*** Acccount does not allow any editing or creation of published posts. Only the ***Government*** Account is able to create and publish new posts.
 
@@ -153,17 +153,17 @@ In the tab section, click on ***Forum***. This would access the Community Forum 
 
 Upon registration of the account, you would be brought to the homepage, where government officials are able to input the relevant datas such as precipitation population size and other fields seen, for the model to predict the total food production based of the data provided.
 
-![Government Dashboard](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/governmentdashboard.png) 
+![Government Dashboard](public/governmentdashboard.png) 
 
 **Government Insights Forum**
 
 With the account operating under the role of the government, it enables the account to create and publish post on the forums. 
 
-![Government Insights Forum](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/governmentdashboard1.png) 
+![Government Insights Forum](public/governmentdashboard1.png) 
 
 When the government account wants to make publish a post in the forum, simply fill in the field, with the relevant contents for the post. Upon clicking the button ***Post***, you will be redirected to the page as seen below, to specify the title for the post.
 
-![Add a post (Government)](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/governmentdashboard1-1.png) 
+![Add a post (Government)](public/governmentdashboard1-1.png) 
 
 
 >**Note**: Creation and publishing of posts is limited to accounts registered under the ***Government*** role.
@@ -172,11 +172,11 @@ When the government account wants to make publish a post in the forum, simply fi
 
 Under the tab ***Government Dashboard***, the account would have access to input past data, concerning the past food production, based of the region and year. Allows for any past data that has been misplaced to be stored for safe-keeping and easy accessiblility.
 
-![GovernmentDashboard (Input Past Data)](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/governmentdashboard2.png) 
+![GovernmentDashboard (Input Past Data)](public/governmentdashboard2.png) 
 
 
 >**Note**: Access from a ***Government*** Account would not allow access to the ***Farmer*** Dashboard.
-![Access of Farmer Dashboard)](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/farmersdashboard.png) 
+![Access of Farmer Dashboard)](public/farmersdashboard.png) 
 
 
 ### Farmer Account
@@ -185,13 +185,13 @@ Upon registration of the account, you would be brought to the homepage, where it
 
 New data concerning crop production can be filled into the necessary field. The graph would automatically update itself, with the new values given.
 
-![Farmer Dashboard](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/farmersdashboard-farmerpov.png) 
+![Farmer Dashboard](public/farmersdashboard-farmerpov.png) 
 
 **Posting of Comments**
 
 Comments can be made to goverment posts, via the fields provided. The comment section serves to be a bridge between other farmers and government officials. As this comment section offers them a direct line of communication. Lastly, from the a government's perspective, it enables the government body to understand the sentiments of the farmers, allowing for appropriate aid or assistance to be given.
 
-![Farmer comments for posts](file:///C:/Users/Benjamin%20Lee/Documents/ddw/Images%20for%20project%20Documentation/forumdashboard1.png
+![Farmer comments for posts](public/forumdashboard1.png
 )
 
 
