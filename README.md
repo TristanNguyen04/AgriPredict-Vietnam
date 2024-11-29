@@ -5,13 +5,14 @@ Farmers and government officials will be able to utilize the total crop producti
 
 #### Environmental Variables:
 
- **1. Total Precipitation (mm)**: Water availability is critical for crop growth. However, excessive or insufficient precipitation can lead to lower yields.
+**1. Total Precipitation (mm)**: Water availability is critical for crop growth. However, excessive or insufficient precipitation can lead to lower yields.
 
 **2. Average Temperature (°C)**: Temperature affects crop growth cycles and the viability of specific crops.
 
 #### Agricultural Variables:
 
 **3. Total Arable Land (hectares)**: The amount of land available for cultivation directly impacts total production.
+
 **4. Fertilizer Consumption (kg/hectare)**: Fertilizers enhance soil fertility, increasing productivity, but excessive use may lead to diminishing returns.
 
 #### Socio-economic Variables:
@@ -37,7 +38,7 @@ You need to have Git to do the project. Download and install the software accord
 
 Clone the github repository from Github. On your laptop's terminal or Git bash, type the following:
 ```sh
-git clone <https://github.com/TristanNguyen04/AgriPredict-Vietnam>
+git clone https://github.com/TristanNguyen04/AgriPredict-Vietnam
 ```
 
 
