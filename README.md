@@ -222,4 +222,4 @@ The raw datasets were sourced from various open-source relevant agricultural dat
 - Total Food production predictor
 - Agriculture Data storage for Farmers
 - Community Forum
-- Government Notification System
+- Government Advisory/Notification System
