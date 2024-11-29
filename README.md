@@ -33,11 +33,11 @@ You need to have Git to do the project. Download and install the software accord
 
 
 ### Downloading Repository
-**1. Access the webapp**
+**1. Access your folder**
 
-Clone the mini project repository from Github. On your laptop's terminal or Git bash, type the following:
+Clone the github repository from Github. On your laptop's terminal or Git bash, type the following:
 ```sh
-git clone <insert link>
+git clone <https://github.com/TristanNguyen04/AgriPredict-Vietnam>
 ```
 
 
@@ -48,14 +48,14 @@ Once you have downloaded the repository, you can go to the repository and to the
 
 Windows:
 ```sh
-cd ~/AgriPredict/webapp
+cd ~/AgriPredict-Vietnam/webapp
 dir
 ```
 
 
 Unix/MacOS:
 ```sh
-cd ~/AgriPredict/webapp
+cd ~/AgriPredict-Vietnam/webapp
 ls
 ```
 The last command should output the following:
@@ -85,10 +85,10 @@ $
 Go to the root folder `webapp`
 
 ```sh
-> cd %USERPROFILE%\AgriPredict\mp_template
+> cd %USERPROFILE%\AgriPredict\webapp
 ```
 ```sh
-$ cd ~/AgriPredict/mp_template
+$ cd ~/AgriPredict/webapp
 ```
 
 Ensure that you have installed `pipenv` package.
