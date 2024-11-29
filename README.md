@@ -33,11 +33,10 @@ You need to have Git to do the project. Download and install the software accord
 
 
 ### Downloading Repository
-**1. Access the mp_template**
+**1. Access the webapp**
 
 Clone the mini project repository from Github. On your laptop's terminal or Git bash, type the following:
 ```sh
-cd downloads
 git clone <insert link>
 ```
 
@@ -56,7 +55,7 @@ dir
 
 Unix/MacOS:
 ```sh
-cd ~/AgriPredict/mp_template
+cd ~/AgriPredict/webapp
 ls
 ```
 The last command should output the following:
