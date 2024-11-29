@@ -45,18 +45,18 @@ git clone <insert link>
 
 **2. Access the AgriPredict**
 
-Once you have downloaded the repository, you can go to the repository and to the folder called ```mp_template```.
+Once you have downloaded the repository, you can go to the repository and to the folder called ```webapp```.
 
 Windows:
 ```sh
-cd downloads/AgriPredict/mp_template
+cd ~/AgriPredict/webapp
 dir
 ```
 
 
 Unix/MacOS:
 ```sh
-cd downloads/AgriPredict/mp_template
+cd ~/AgriPredict/mp_template
 ls
 ```
 The last command should output the following:
@@ -83,20 +83,20 @@ while the MACOS/Linux prompt will be represented by:
 $
 ```
 
-Go to the root folder `mp_template`
+Go to the root folder `webapp`
 
 ```sh
-> cd %USERPROFILE%\Downloads\AgriPredict\mp_template
+> cd %USERPROFILE%\AgriPredict\mp_template
 ```
 ```sh
-$ cd ~/Downloads/AgriPredict/mp_template
+$ cd ~/AgriPredict/mp_template
 ```
 
 Ensure that you have installed `pipenv` package.
 ```sh 
 python -m pip install --user pipenv
 ```
-> **Note**: If you have not installed the relevant packages specified in the `Pipfile`, with `mp_template` as root folder.
+> **Note**: If you have not installed the relevant packages specified in the `Pipfile`, with `webapp` as root folder.
 
 
 
@@ -105,7 +105,7 @@ python -m pipenv install
 python -m pipenv shell
 ```
 ### Launch Website
-Ensure that you have downloaded the relevant packages before running the command below. Ensure that you are in the root folder `mp_template.1`
+Ensure that you have downloaded the relevant packages before running the command below. Ensure that you are in the root folder `webapp`
 ```sh
 flask run
 ```
@@ -115,8 +115,7 @@ You should see a local IP address being displayed, copy the ip address to your w
 ```sh
 * Running on http://127.0.0.1:5000 
 ```
->**Note**: CTRL+C in the terminal to close the website.
-
+>**Note**: Ctrl+C (Cmd+C on Mac) in the terminal to close the website.
 
 
 
