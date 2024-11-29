@@ -86,10 +86,10 @@ $
 Go to the root folder `webapp`
 
 ```sh
-> cd %USERPROFILE%\AgriPredict\webapp
+> cd %USERPROFILE%\AgriPredict-Vietnam\webapp
 ```
 ```sh
-$ cd ~/AgriPredict/webapp
+$ cd ~/AgriPredict-Vietnam/webapp
 ```
 
 Ensure that you have installed `pipenv` package.
