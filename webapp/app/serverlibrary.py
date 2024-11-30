@@ -1,29 +1,29 @@
 import numpy as np
 import pandas as pd
 from app import db
-from app.models import User, Post, FarmerData  # Add your models if needed
+from app.models import User, Post, FarmerData
 from typing import Optional
 
-# Precomputed values from training
+# Precomputed values from training (Polynomial Model)
 # These represent means and standard deviations for normalization
 PRECOMPUTED_MEANS = [
-    1762.51708, 24.6891667, 6028700.0,
-    249.680609, 98165.125, 71337104.3
+    3.16531154e+19, 2.46629167e+01, 5.98605000e+06,
+    2.33238799e+02, 8.41371250e+04, 7.03379420e+07
 ]
 PRECOMPUTED_STDS = [
-    96.5197489, 0.364759243, 541067.218,
-    164.115636, 113295.964, 21007529.1
+    1.09002043e+19, 3.72910614e-01, 5.00222329e+05, 
+    1.59659474e+02, 9.56351764e+04, 1.87028452e+07
 ]
 
-# Final trained beta coefficients for the regression model
+# Final trained beta coefficients for the multiple linear regression model
 BETA_FINAL = np.array([
-    [2.50278434e+08],  # Intercept
-    [2.93528971e+06],
-    [1.79629171e+06],
-    [1.72130379e+08],
-    [-3.41807624e+07],
-    [-5.66497356e+07],
-    [-4.38451446e+07]
+    [ 2.30270515e+08], # Intercept
+    [-1.92163191e+06],
+    [ 1.99882125e+07],
+    [ 1.82389237e+08],
+    [-3.79494624e+07],
+    [-4.23365272e+07],
+    [-5.93943483e+07]
 ])
 
 def split_data(
