@@ -121,8 +121,12 @@ def predict():
     try:
         # Extract input data from the request
         input_data = request.get_json()
+
+        # Apply Transformation - Polynomial Terms of 6th-order Precipitation
+        precipitation_power6 = input_data['total_precipitation'] ** 6 
+
         features = np.array([
-            input_data['total_precipitation'],
+            precipitation_power6, 
             input_data['average_temperature'],
             input_data['total_arable_land'],
             input_data['fertilizer_consumption'],
