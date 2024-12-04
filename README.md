@@ -117,8 +117,7 @@ You should see a local IP address being displayed, copy the ip address to your w
 ```
 >**Note**:
 > Ctrl+C (Cmd+C on Mac) in the terminal to close the website.
-> Testing Accounts:
-> 
+Testing Accounts:
 
 
 
