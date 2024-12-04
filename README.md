@@ -115,7 +115,10 @@ You should see a local IP address being displayed, copy the ip address to your w
 ```sh
 * Running on http://127.0.0.1:5000 
 ```
->**Note**: Ctrl+C (Cmd+C on Mac) in the terminal to close the website.
+>**Note**:
+> Ctrl+C (Cmd+C on Mac) in the terminal to close the website.
+> Testing Accounts:
+> 
 
 
 
