@@ -231,3 +231,13 @@ The raw datasets were sourced from various open-source relevant agricultural dat
 - Agriculture Data storage for Farmers
 - Community Forum
 - Government Advisory/Notification System
+
+Here’s the markdown version of your acknowledgment section:
+
+
+## Acknowledgements  
+This project serves as a platform to integrate data-driven insights into practical agricultural solutions.  
+
+- We extend our gratitude to the open-source community for developing Flask and other essential tools.  
+- We thank the data providers whose contributions enable meaningful analysis.  
+- Special thanks to the professors of *Data Driven World* at SUTD for their invaluable guidance and support throughout this initiative.  
