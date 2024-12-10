@@ -138,7 +138,7 @@ After copying and pasting the generated IP address from the terminal that you ar
 If this is your first time accessing the website, please register an account for yourself. As you can see in the ***Account Registration***, please fill the relevant fields. 
 
 
-![Registration page](public/Login%20Page-1.png) 
+![Registration page](public/register_page.png) 
 
 >**Note**: The website implements role-based access control, where user accounts are assigned specific permissions. For example, only certain accounts are granted the ability to post on forums, while others are restricted to read-only access.
 
