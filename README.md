@@ -146,7 +146,7 @@ If this is your first time accessing the website, please register an account for
 
 Access of the annual statistics of total food production (tonnes) is shown via clicking on the tab ***Home***. Addtionally, the other countries shown, are meant. The graphs and data for the other countries are not accessible or editable.
 
-![Government Homepage](public/governmentdashboard.png) 
+![Government Homepage](public/home_page(1).png) 
 
 **Accessing Community Forum**
 
