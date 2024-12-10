@@ -146,7 +146,7 @@ If this is your first time accessing the website, please register an account for
 
 Access of the annual statistics of total food production (tonnes) is shown via clicking on the tab ***Home***. Addtionally, the other countries shown, are meant. The graphs and data for the other countries are not accessible or editable.
 
-![Government Homepage](public/home_page(1).png) 
+![Government Homepage](public/home_page.png) 
 
 **Accessing Community Forum**
 
@@ -167,11 +167,11 @@ Upon registration of the account, you would be brought to the homepage, where go
 
 With the account operating under the role of the government, it enables the account to create and publish post on the forums. 
 
-![Government Insights Forum](public/governmentdashboard1.png) 
+![Government Insights Forum](public/government_insight_forum.png) 
 
 When the government account wants to make publish a post in the forum, simply fill in the field, with the relevant contents for the post. Upon clicking the button ***Post***, you will be redirected to the page as seen below, to specify the title for the post.
 
-![Add a post (Government)](public/governmentdashboard1-1.png) 
+![Add a post (Government)](public/government_add_post.png) 
 
 
 >**Note**: Creation and publishing of posts is limited to accounts registered under the ***Government*** role.
@@ -180,11 +180,11 @@ When the government account wants to make publish a post in the forum, simply fi
 
 Under the tab ***Government Dashboard***, the account would have access to input past data, concerning the past food production, based of the region and year. Allows for any past data that has been misplaced to be stored for safe-keeping and easy accessiblility.
 
-![GovernmentDashboard (Input Past Data)](public/governmentdashboard2.png) 
+![GovernmentDashboard (Input Past Data)](public/government_add_past_data.png) 
 
 
 >**Note**: Access from a ***Government*** Account would not allow access to the ***Farmer*** Dashboard.
-![Access of Farmer Dashboard)](public/farmersdashboard.png) 
+![Access of Farmer Dashboard)](public/farmer_not_access.png) 
 
 
 ### Farmer Account
@@ -193,13 +193,13 @@ Upon registration of the account, you would be brought to the homepage, where it
 
 New data concerning crop production can be filled into the necessary field. The graph would automatically update itself, with the new values given.
 
-![Farmer Dashboard](public/farmersdashboard-farmerpov.png) 
+![Farmer Dashboard](public/farmersdashboard.png) 
 
 **Posting of Comments**
 
 Comments can be made to goverment posts, via the fields provided. The comment section serves to be a bridge between other farmers and government officials. As this comment section offers them a direct line of communication. Lastly, from the a government's perspective, it enables the government body to understand the sentiments of the farmers, allowing for appropriate aid or assistance to be given.
 
-![Farmer comments for posts](public/forumdashboard1.png
+![Farmer comments for posts](public/view_post.png
 )
 
 
