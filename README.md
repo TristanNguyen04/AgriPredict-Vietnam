@@ -189,7 +189,7 @@ Under the tab ***Government Dashboard***, the account would have access to input
 
 
 >**Note**: Access from a ***Government*** Account would not allow access to the ***Farmer*** Dashboard.
-![Access of Farmer Dashboard)](public/farmer_not_access.png) 
+![Access of Farmer Dashboard)](public/government_not_access.png) 
 
 
 ### Farmer Account
@@ -198,14 +198,19 @@ Upon registration of the account, you would be brought to the homepage, where it
 
 New data concerning crop production can be filled into the necessary field. The graph would automatically update itself, with the new values given.
 
-![Farmer Dashboard](public/farmersdashboard.png) 
+![Farmer Dashboard](public/farmer_not_access.png) 
+
+**Tracking of Crop Production**
+
+Farmers can monitor their crop production over time by entering the month, year, and total production data. The system generates a graph to help visualize trends, showing how crop production increases or decreases over the selected period.
+
+![Farmer comments for posts](public/farmer_dashboard.png)
 
 **Posting of Comments**
 
 Comments can be made to goverment posts, via the fields provided. The comment section serves to be a bridge between other farmers and government officials. As this comment section offers them a direct line of communication. Lastly, from the a government's perspective, it enables the government body to understand the sentiments of the farmers, allowing for appropriate aid or assistance to be given.
 
-![Farmer comments for posts](public/view_post.png
-)
+![Farmer comments for posts](public/view_post.png)
 
 
 
