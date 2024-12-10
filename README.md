@@ -194,17 +194,16 @@ Under the tab ***Government Dashboard***, the account would have access to input
 
 ### Farmer Account
 
+**Tracking of Crop Production**
+
 Upon registration of the account, you would be brought to the homepage, where it shows a graph that displays the crop production over a time period. This is meant as a crop production tracker for farmers, visualization of their crop production over months and years.
 
 New data concerning crop production can be filled into the necessary field. The graph would automatically update itself, with the new values given.
 
-![Farmer Dashboard](public/farmer_not_access.png) 
+![Farmer Dashboard](public/farmer_dashboard.png)
 
-**Tracking of Crop Production**
-
-Farmers can monitor their crop production over time by entering the month, year, and total production data. The system generates a graph to help visualize trends, showing how crop production increases or decreases over the selected period.
-
-![Farmer comments for posts](public/farmer_dashboard.png)
+>**Note**: Access from a ***Government*** Account would not allow access to the ***Farmer*** Dashboard.
+![Access of Government Dashboard](public/farmer_not_access.png) 
 
 **Posting of Comments**
 
