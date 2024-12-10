@@ -202,7 +202,7 @@ New data concerning crop production can be filled into the necessary field. The 
 
 ![Farmer Dashboard](public/farmer_dashboard.png)
 
->**Note**: Access from a ***Government*** Account would not allow access to the ***Farmer*** Dashboard.
+>**Note**: Access from a ***Farmer*** Account would not allow access to the ***Government*** Dashboard.
 ![Access of Government Dashboard](public/farmer_not_access.png) 
 
 **Posting of Comments**
@@ -240,8 +240,6 @@ The raw datasets were sourced from various open-source relevant agricultural dat
 - Agriculture Data storage for Farmers
 - Community Forum
 - Government Advisory/Notification System
-
-Here’s the markdown version of your acknowledgment section:
 
 
 ## Acknowledgements  
