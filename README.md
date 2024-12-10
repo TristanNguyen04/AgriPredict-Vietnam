@@ -176,6 +176,10 @@ When the government account wants to make publish a post in the forum, simply fi
 
 >**Note**: Creation and publishing of posts is limited to accounts registered under the ***Government*** role.
 
+**Prediction of Data**
+Under the tab ***Government Dashboard***,  the government account can input predictor values to generate crop production forecasts using our trained backend model.
+![GovernmentDashboard (Predicton Data)](public/government_predict_data.png) 
+
 **Additon of Data**
 
 Under the tab ***Government Dashboard***, the account would have access to input past data, concerning the past food production, based of the region and year. Allows for any past data that has been misplaced to be stored for safe-keeping and easy accessiblility.
