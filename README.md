@@ -161,9 +161,9 @@ In the tab section, click on ***Forum***. This would access the Community Forum 
 
 Upon registration of the account, you would be brought to the homepage, where government officials are able to input the relevant datas such as precipitation population size and other fields seen, for the model to predict the total food production based of the data provided.
 
-![Government Dashboard](public/governmentdashboard.png) 
+![Government Dashboard](public/government_dashboard.png) 
 
-**Government Insights Forum**
+**Government Insights (Posting) Forum**
 
 With the account operating under the role of the government, it enables the account to create and publish post on the forums. 
 
