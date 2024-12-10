@@ -152,7 +152,7 @@ Access of the annual statistics of total food production (tonnes) is shown via c
 
 In the tab section, click on ***Forum***. This would access the Community Forum page. This is forum where notifications by the Government can be seen. 
 
-![Accessing of Community Forum](public/farmersforum-farmerpov.png) 
+![Accessing of Community Forum](public/forum.png) 
 
 >**Note**: The ***Farmer*** Acccount does not allow any editing or creation of published posts. Only the ***Government*** Account is able to create and publish new posts.
 
