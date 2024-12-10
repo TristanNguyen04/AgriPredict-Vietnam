@@ -132,7 +132,7 @@ You should see a local IP address being displayed, copy the ip address to your w
 ## Usage
 After copying and pasting the generated IP address from the terminal that you are using, you will land on login page. 
 
-![Login Page](public/governmentdashboard.png) 
+![Login Page](public/Login%20Page.png) 
 
 
 If this is your first time accessing the website, please register an account for yourself. As you can see in the ***Account Registration***, please fill the relevant fields. 
